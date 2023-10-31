@@ -1,0 +1,432 @@
+@import "mixin";
+@import "variables";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Lora', serif;
+    font-family: 'Martian Mono', monospace;
+}
+
+.container {
+    max-width: 1440px;
+    padding: 0px 32px;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.sec-1 {
+    width: 100%;
+    background-image: url(https://mobirise.com/extensions/glassm5/photo/assets/images/background4.jpg);
+    padding: 100px 0px;
+
+    .sec-1-center {
+        @include display;
+        flex-direction: column;
+        gap: 50px;
+        color: $blue;
+
+        .top {
+            @include display;
+            flex-direction: column;
+            gap: 20px;
+
+            h4{
+                font-size: 20px;
+                font-weight: bolder;
+            }
+
+
+            h3 {
+                font-size: 25px;
+                font-weight: bolder;
+            }   
+
+        }
+
+        .bottom {
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            gap: 30px;            
+            div {
+                width: 350px;
+                height: 100%;
+                background: linear-gradient(0deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.6) 100%);
+                backdrop-filter: blur(3.5px);
+                box-shadow: 0 0 20px 0 rgb(0 0 0 / 10%);
+                border-radius: 30px;
+                @include display(center, flex-start);
+                flex-direction: column;
+                gap: 20px;
+                padding: 20px 40px;
+
+                h4 {
+                    font-size: 60px;
+                }
+
+                h5 {
+                    font-size: 25px;
+                }
+
+                button {
+                    width: 180px;
+                    height: 70px;
+                    background: $gradient;
+                    border: none;
+                    border-radius: 9999px;
+                    padding: 10px 20px;
+
+                    a {
+                        color: white;
+                        font-size: 20px;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.sec-2 {
+    width: 100%;
+    padding: 20px 0px;
+    background-image: url(https://mobirise.com/extensions/glassm5/photo/assets/images/background1.jpg);
+    padding: 100px 0px;
+
+    .sec-2-center {
+        width: 90%;
+        @include display;
+        margin: auto;
+        gap: 100px;
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.6) 100%);
+        backdrop-filter: blur(3.5px);
+        box-shadow: 0 0 20px 0 rgb(0 0 0 / 10%);
+        padding: 70px 0px;
+        border-radius: 50px;
+
+        .col-lg-12 {
+            @include display;
+        }
+
+        div {
+            padding: 10px 30px;
+        }
+
+        input {
+            width: 100%;
+            height: 70px;
+            border-radius: 20px;
+            border: none;
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.6) 100%);
+            backdrop-filter: blur(3.5px);
+            box-shadow: 0 0 20px 0 rgb(0 0 0 / 10%);
+            padding: 20px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 300px;
+            border-radius: 20px;
+            border: none;
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.6) 100%);
+            backdrop-filter: blur(3.5px);
+            box-shadow: 0 0 20px 0 rgb(0 0 0 / 10%);
+            padding: 20px;
+        }
+
+        button {
+            width: 100%;
+            height: 70px;
+            background: $gradient;
+            border: none;
+            border-radius: 9999px;
+            padding: 10px 20px;
+            color: white;
+            font-size: 20px;
+            font-weight: 700;
+        }
+    }
+}
+
+.sec-3 {
+    width: 100%;
+    padding: 90px 0px;
+    background-image: url(https://mobirise.com/extensions/glassm5/photo/assets/images/background5.jpg);
+
+    .sec-3-center {
+        @include display(space-between, flex-end);
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 20px;
+
+        .left {
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 30px;
+            }
+
+        }
+
+        .right {
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.6) 100%);
+            backdrop-filter: blur(3.5px);
+            box-shadow: 0 0 20px 0 rgb(0 0 0 / 10%);
+            padding: 50px 100px;
+            border-radius: 30px;
+            color: $blue;
+            @include display(center, flex-start);
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+}
+
+.sec-4 {
+    width: 100%;
+    background-color: #f2f6ff;
+    padding: 150px 0px;
+
+    .sec-4-center {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 20px;
+
+        .left {
+            position: relative;
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 30px;
+            }
+
+            .block {
+                background-color: #007bff;
+                padding: 20px 25px;
+                position: absolute;
+                bottom: -50px;
+                right: -80px;
+                z-index: 2;
+                border-radius: 30px;
+                color: white;
+                border: 4px dashed white;
+                outline: 20px solid #007bff;
+            }
+        }
+
+        .right {
+            width: 80%;
+            height: 100%;
+            @include display(center, flex-start);
+            flex-direction: column;
+            padding-left: 100px;
+            color: $blue;
+            h2{
+                font-weight: bolder;
+            }
+
+            p {
+                padding: 20px 0px;
+                font-size: 20px;
+                color: gray;
+            }
+
+            button {
+                width: 200px;
+                height: 50px;
+                border-radius: 9999px;
+                background-color: #ffc85b;
+                border: 4px dashed white;
+                color: white;
+                outline: 5px solid #ffc85b;
+                font-size: 20px;
+
+                &:hover {
+                    background-color: #007bff;
+                    outline: 5px solid #007bff;
+                    transition: 0.5s;
+                }
+            }
+        }
+    }
+}
+
+.sec-5 {
+    width: 100%;
+    padding: 150px 0px;
+
+    .sec-5-center {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 10px;
+
+        .left {
+            position: relative;
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 30px;
+            }
+
+            .block {
+                @include display;
+                flex-direction: column;
+                gap: 20px;
+                background-color: #007bff;
+                padding: 20px 25px;
+                position: absolute;
+                bottom: -50px;
+                right: -80px;
+                z-index: 2;
+                border-radius: 30px;
+                color: white;
+                border: 4px dashed white;
+                outline: 20px solid #007bff;
+                input, textarea{
+                    width: 100%;
+                    border-radius: 9999px;
+                    padding: 20px;
+                }
+                textarea{
+                    border-radius: 30px;
+                }
+                button{
+                    width: 100%;
+                    border: none;
+                    background-color: #ffc85b;
+                    padding: 20px;
+                    border-radius: 9999px;
+                    color: white;
+                    font-size: 20px;
+                    &:hover{
+                        background-color: #007bff;
+                        transition: 1s;
+                    }
+                }
+            }
+        }
+
+        .right {
+            width: 95%;
+            height: 100%;
+            @include display(center, flex-start);
+            flex-direction: column;
+            padding-left: 200px;
+            // gap: 10px;
+            color: $blue;
+            h2{
+                font-weight: bolder;
+            }
+            p {
+                padding-top:20px;
+                padding-bottom: 50px;
+                font-size: 20px;
+                color:gray;
+            }
+            .done{
+                @include display;
+                gap: 20px;
+                padding-bottom: 20px;
+                i{
+                    color: #007bff;
+                    font-size: 30px;
+                }
+
+            }
+
+        }
+    }
+}
+
+.sec-6 {
+    width: 100%;
+    padding: 90px 0px;
+
+    .sec-6-center {
+        @include display(space-between, flex-end);
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 20px;
+        width: 100%;
+        height: 100%;
+        .left {
+            width: 95%;
+            height: 100%;
+            @include display(center, flex-start);
+            flex-direction: column;
+            padding-left: 200px;
+            gap: 10px;
+            h3{
+                color: $blue;
+                font-weight: bolder;
+            }
+            &>h3{
+                font-size: 50px;
+            }
+
+            p {
+                padding-top:20px;
+                font-size: 20px;
+                color: grey;
+            }
+            .img{
+                @include display;
+                gap: 20px;
+                img{
+                    width: 50px;
+                    height:50px;
+                }
+            }
+
+        }
+        .right {
+            width: 100%;
+            height: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 30px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:991px) {
+    .sec-1 .sec-1-center {
+        .top{
+           text-align: center;
+        }
+        .bottom{
+            grid-template-columns: repeat(2, auto);
+        }
+    }
+    .sec-2 .sec-2-center{
+        .top{
+            text-align: center;
+         }
+        div{
+            padding: 10px 8px;
+        }
+    }
+    .sec-3 .sec-3-center {
+        grid-template-columns: repeat(1, auto);
+    }
+}
+@media screen and (max-width:576px) {
+    .sec-1 .sec-1-center {
+        .top{
+            text-align: center;
+        }
+        .bottom{
+            grid-template-columns: repeat(1, auto);
+        }
+    }
+
+}
