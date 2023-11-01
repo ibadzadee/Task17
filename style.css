@@ -21,6 +21,9 @@ a {
   width: 100%;
   background-image: url(https://mobirise.com/extensions/glassm5/photo/assets/images/background4.jpg);
   padding: 100px 0px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .sec-1 .sec-1-center {
   display: flex;
@@ -46,9 +49,12 @@ a {
   font-weight: bolder;
 }
 .sec-1 .sec-1-center .bottom {
-  display: grid;
-  grid-template-columns: repeat(3, auto);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   gap: 30px;
+  height: 100%;
 }
 .sec-1 .sec-1-center .bottom div {
   width: 350px;
@@ -387,12 +393,6 @@ a {
 }
 
 @media screen and (max-width: 991px) {
-  .sec-1 .sec-1-center .top {
-    text-align: center;
-  }
-  .sec-1 .sec-1-center .bottom {
-    grid-template-columns: repeat(2, auto);
-  }
   .sec-2 .sec-2-center .top {
     text-align: center;
   }
@@ -400,14 +400,6 @@ a {
     padding: 10px 8px;
   }
   .sec-3 .sec-3-center {
-    grid-template-columns: repeat(1, auto);
-  }
-}
-@media screen and (max-width: 576px) {
-  .sec-1 .sec-1-center .top {
-    text-align: center;
-  }
-  .sec-1 .sec-1-center .bottom {
     grid-template-columns: repeat(1, auto);
   }
 }/*# sourceMappingURL=style.css.map */
